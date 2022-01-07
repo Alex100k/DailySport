@@ -13,6 +13,11 @@
 		C898613127417A0A0082A9B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C898612F27417A0A0082A9B3 /* Main.storyboard */; };
 		C898613327417A0C0082A9B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C898613227417A0C0082A9B3 /* Assets.xcassets */; };
 		C898613627417A0C0082A9B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C898613427417A0C0082A9B3 /* LaunchScreen.storyboard */; };
+		C898613F27417A980082A9B3 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = C898613E27417A980082A9B3 /* SwiftSoup */; };
+		C898614227417AB00082A9B3 /* SoupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C898614127417AB00082A9B3 /* SoupManager.swift */; };
+		C898614627417FB50082A9B3 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = C898614527417FB50082A9B3 /* Course.swift */; };
+		C8986148274193610082A9B3 /* SeriesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8986147274193610082A9B3 /* SeriesParser.swift */; };
+		C898614A274193A30082A9B3 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8986149274193A30082A9B3 /* Series.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		C898613227417A0C0082A9B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C898613527417A0C0082A9B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C898613727417A0C0082A9B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C898614127417AB00082A9B3 /* SoupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoupManager.swift; sourceTree = "<group>"; };
+		C898614527417FB50082A9B3 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		C8986147274193610082A9B3 /* SeriesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesParser.swift; sourceTree = "<group>"; };
+		C8986149274193A30082A9B3 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C898613F27417A980082A9B3 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +69,32 @@
 				C898612927417A0A0082A9B3 /* AppDelegate.swift */,
 				C898612B27417A0A0082A9B3 /* SceneDelegate.swift */,
 				C898612D27417A0A0082A9B3 /* ViewController.swift */,
+				C898614027417AA10082A9B3 /* Managers */,
+				C898614327417FA80082A9B3 /* Models */,
 				C898612F27417A0A0082A9B3 /* Main.storyboard */,
 				C898613227417A0C0082A9B3 /* Assets.xcassets */,
 				C898613427417A0C0082A9B3 /* LaunchScreen.storyboard */,
 				C898613727417A0C0082A9B3 /* Info.plist */,
 			);
 			path = DailySport;
+			sourceTree = "<group>";
+		};
+		C898614027417AA10082A9B3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C898614127417AB00082A9B3 /* SoupManager.swift */,
+				C8986147274193610082A9B3 /* SeriesParser.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C898614327417FA80082A9B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C898614527417FB50082A9B3 /* Course.swift */,
+				C8986149274193A30082A9B3 /* Series.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +113,9 @@
 			dependencies = (
 			);
 			name = DailySport;
+			packageProductDependencies = (
+				C898613E27417A980082A9B3 /* SwiftSoup */,
+			);
 			productName = DailySport;
 			productReference = C898612627417A0A0082A9B3 /* DailySport.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +144,9 @@
 				Base,
 			);
 			mainGroup = C898611D27417A0A0082A9B3;
+			packageReferences = (
+				C898613D27417A980082A9B3 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = C898612727417A0A0082A9B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,7 +176,11 @@
 			files = (
 				C898612E27417A0A0082A9B3 /* ViewController.swift in Sources */,
 				C898612A27417A0A0082A9B3 /* AppDelegate.swift in Sources */,
+				C898614627417FB50082A9B3 /* Course.swift in Sources */,
+				C898614227417AB00082A9B3 /* SoupManager.swift in Sources */,
 				C898612C27417A0A0082A9B3 /* SceneDelegate.swift in Sources */,
+				C8986148274193610082A9B3 /* SeriesParser.swift in Sources */,
+				C898614A274193A30082A9B3 /* Series.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C898613D27417A980082A9B3 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C898613E27417A980082A9B3 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C898613D27417A980082A9B3 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C898611E27417A0A0082A9B3 /* Project object */;
 }
